@@ -1,38 +1,98 @@
-.App {
+/* Center everything in the app */
+.app {
   text-align: center;
+  margin-top: 50px;
+  position: relative; /* Added relative position for the emoji rain to be positioned properly */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for the heart image */
+.image-container {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heart {
+  width: 200px; /* Adjust the size */
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Styling for the header and text */
+h1 {
+  color: #ff69b4; /* Pink color */
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ff1493;
+  margin-bottom: 20px;
+}
+
+/* Button container */
+.button-container {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* YES button */
+.yes-button {
+  background-color: #4caf50; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* NO button */
+.no-button {
+  background-color: #f44336; /* Red */
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Add hover effect */
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Emoji rain effect */
+.emoji-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure emojis fill the entire screen */
+  z-index: 1;
+}
+
+/* Individual emoji styling */
+.emoji {
+  font-size: 2rem;
+  position: absolute; /* Positioning absolute for free movement */
+  animation: drop 5s infinite linear;
+  display: inline-block;
+  margin: 5px;
+  z-index: 2;
+  opacity: 0; /* Start with invisible */
+  transform: translateX(-50%); /* Keep horizontal centering */
+}
+
+/* Animation for falling emojis */
+@keyframes drop {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+    transform: translateY(50px) translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) translateX(-50%);
   }
 }
