@@ -35,7 +35,7 @@ export default function App() {
             top: `${Math.random() * 100}vh`, // Random vertical position
           }}
         >
-          {emojiType === "crying" ? "bruh" : "meow"}
+          {emojiType === "crying" ? "wrong answer" : "meow"}
         </span>
       );
     }
@@ -50,8 +50,8 @@ export default function App() {
 
       {/* Heart Image in the Center */}
       <div className="image-container">
-        <motion.img
-          src="/cute-heart.png" // Image in public folder
+        <img
+          src="/amy_brent.jpg" // Image in public folder
           alt="Cute Heart"
           className="heart"
           style={{
