@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/brent-valentine/precache-manifest.0873211e73f338ef08d386db610287a7.js"
+  "/brent-valentine/precache-manifest.0029044048dbe5999391261ae602a89f.js"
 );
 
 self.addEventListener('message', (event) => {
